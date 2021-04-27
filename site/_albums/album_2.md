@@ -1,19 +1,19 @@
 ---
-title: Keepin' it Strange
+title: Flip the Switch
 artwork_src: /images/404.jpg
 tracks:
 - track_1:
-  title: Better Let Go
+  title: Lost in the City
   src: /audio/dv.mp3
 - track_2:
-  title: All Those Other Colors
+  title: Hocus Pocus
   src: /audio/dv.mp3
 - track_3:
-  title: Outta my Head Again
+  title: Eye to Eye
   src: /audio/dv.mp3
 - track_4:
-  title: Wasted
+  title: Another Piece of my Heart
   src:/audio/dv.mp3
 - track_5:
-  title: Keepin' it Strange
+  title: Flip the Switch
   src: /audio/dv.mp3
