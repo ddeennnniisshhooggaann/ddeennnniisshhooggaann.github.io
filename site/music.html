@@ -1,0 +1,21 @@
+---
+layout: default
+title: Music
+permalink: /music/
+---
+
+<main class="music container">
+  <h1>{{page.title}}</h1>
+  {% for album in site.albums %}
+    <div class="album">
+      <img class="album-artwork" src={{album.artwork_src}} alt={{album.title}}>
+      <h2>{{album.title}}</h2>
+      {% for track in album.tracks %}
+        <div class="track">
+          <h3>{{track.title}}</h3>
+          <audio src="/assets/Hal.mp3" controls></audio>
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</main>
