@@ -13,7 +13,8 @@ tracks:
   src: /audio/dv.mp3
 - track_4:
   title: Wasted
-  src:/audio/dv.mp3
+  src: /audio/dv.mp3
 - track_5:
   title: Keepin' it Strange
   src: /audio/dv.mp3
+---

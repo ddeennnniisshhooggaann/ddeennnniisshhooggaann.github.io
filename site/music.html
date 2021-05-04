@@ -8,7 +8,7 @@ permalink: /music/
   <h1>{{page.title}}</h1>
   {% for album in site.albums %}
     <div class="album">
-      <img class="album-artwork" src={{album.artwork_src}} alt={{album.title}}>
+      <img class="album-artwork" src="{{album.artwork_src}}" alt="{{album.title}}">
       <h2>{{album.title}}</h2>
       {% for track in album.tracks %}
         <div class="track">

@@ -13,7 +13,8 @@ tracks:
   src: /audio/dv.mp3
 - track_4:
   title: Another Piece of my Heart
-  src:/audio/dv.mp3
+  src: /audio/dv.mp3
 - track_5:
   title: Flip the Switch
   src: /audio/dv.mp3
+---
