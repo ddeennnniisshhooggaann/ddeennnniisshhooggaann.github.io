@@ -9,7 +9,7 @@
 html {font-size: 100%;} /*16px*/
 
 body {
-  background: #6C337A;
+  background: #440075;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   line-height: 1.45;
@@ -17,6 +17,8 @@ body {
 }
 
 p {margin-bottom: 1rem;}
+
+a {color: white;}
 
 h1, h2, h3, h4, h5 {
   margin: 3rem 0 1.38rem;
@@ -35,7 +37,6 @@ h3, h4, h5 {
 }
 
 h1 {
-  margin-top: 0;
   font-size: 4.209rem;
 }
 
@@ -51,10 +52,12 @@ small, .text_small {font-size: 0.75rem;}
 
 // Layout
 
-@media screen and (max-width: 600px) {
-  
-  h1, h2, h3 {font-size: 1.777rem;}
+img, audio {
+  max-width: 100%;
+}
 
+@media screen and (max-width: 599px) {
+  h1, h2, h3 {font-size: 1.777rem;}
 }
 
 .site-header {
@@ -74,55 +77,184 @@ small, .text_small {font-size: 0.75rem;}
 }
 
 .nav-links li {
-  background: lightgray;
+  box-shadow: 0 0 transparent;
+  background: transparent;
   padding: .25em .5em;
-}
+  border-radius: .25rem;
+  border: 2px solid #ea398d;
+  transition: 1s linear;
 
-.nav-links .current {
-  cursor: default;
-  text-decoration: none;
-  color: black;
+  a {
+    color: white;
+    text-decoration: none;
+    transition: 1s linear;
+  }
+
+  &:not(.current) {
+    &:hover, &:active {
+      box-shadow: 0.3em 0.3em #ea398d;
+      background: rgba(246,241,78,.8);
+      border-color: transparent;
+
+      a {color: #440075;}
+    }
+  }
+
+  &.current {
+    background: transparent;
+
+    a {
+      cursor: default;
+      color: #ea398d;
+    }
+  }
 }
 
 .container {
-  padding: 0 1.5rem;
+  margin: 0 1.5rem;
 }
 
-.home-graphic, .photos, .music {
-  margin: 1.5rem auto;
-}
+.home, .photos, .music {
 
-.photos, .music {
-  display: grid;
-  grid-gap: 1.5rem;
+  margin: 0 auto 3rem;
 
-  .album:not(:last-of-type) {
-    margin-bottom: 2rem;
-    padding-bottom: 3rem;
-    border-bottom: 2px solid #ea398d; 
-  }
+  .container {
+    display: grid;
+    grid-gap: 1.5rem;
 
-  & img, & audio {
-    max-width: 100%;
+    .album:not(:last-of-type) {
+      margin-bottom: 2rem;
+      padding-bottom: 3rem;
+      border-bottom: 2px solid #ea398d; 
+    }
   }
 }
 
 footer {
   text-align: center;
-  background: #333;
+  background: #242424;
   color: white;
   padding: 1em 1em 1.5em;
   margin-top: 3em;
-  // position: absolute;
-  // bottom: 0;
-  // width: 100%;
+
+  small {
+    font-size: .75em;
+  }
 }
 
 p {
   margin: .5em auto;
 }
 
-footer small {
-  font-size: .75em;
+.home-graphic {
+  margin-bottom: 3rem;
+  height: 11.25rem;
+  background: url(https://via.placeholder.com/320) center center / cover;
 }
 
+// Tablet styles
+@media screen and (min-width: 600px) {
+  .home-graphic {
+    height: 27rem;
+  }
+}
+
+img, audio {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 599px) {
+  h1, h2, h3 {font-size: 1.777rem;}
+}
+
+.site-header {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 1.5em;
+}
+
+.site-logo {
+  display: block;
+  margin: 1.5em auto;
+  height: 4em;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-links li {
+  box-shadow: 0 0 transparent;
+  background: transparent;
+  padding: .25em .5em;
+  border-radius: .25rem;
+  border: 2px solid #ea398d;
+  transition: 1s linear;
+
+  a {
+    color: white;
+    text-decoration: none;
+    transition: 1s linear;
+  }
+
+  &:not(.current) {
+    &:hover, &:active {
+      box-shadow: 0.3em 0.3em #ea398d;
+      background: rgba(246,241,78,.8);
+      border-color: transparent;
+
+      a {color: #440075;}
+    }
+  }
+
+  &.current {
+    background: transparent;
+
+    a {
+      cursor: default;
+      color: #ea398d;
+    }
+  }
+}
+
+.container {
+  margin: 0 1.5rem;
+}
+
+.home, .photos, .music {
+
+  margin: 0 auto 3rem;
+
+  .container {
+    display: grid;
+    grid-gap: 1.5rem;
+
+    .album:not(:last-of-type) {
+      margin-bottom: 2rem;
+      padding-bottom: 3rem;
+      border-bottom: 2px solid #ea398d; 
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  background: #242424;
+  color: white;
+  padding: 1em 1em 1.5em;
+  margin-top: 3em;
+
+  small {
+    font-size: .75em;
+  }
+}
+
+p {
+  margin: .5em auto;
+}
+
+.home-graphic {
+  margin-bottom: 3rem;
+  height: 11.25rem;
+  background: url(https://via.placeholder.com/320) center center / cover;
+}

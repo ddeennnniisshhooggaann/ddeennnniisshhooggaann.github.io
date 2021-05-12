@@ -21,23 +21,19 @@
       <nav>
         <ul class="nav-links">
           {% for link in site.nav-links %}
-            <li>
             {% if link.url == page.url %}
-              <a href="#" class="current">
+              <li class="current"><a href="#">
             {% else %}
-              <a href="{{link.url}}">
+              <li><a href="{{link.url}}">
             {% endif %}
             {{link.page}}</a></li>
           {% endfor %}
-          <!-- <li><a href="{{site.baseurl}}/">Home</a></li>
-          <li><a href="{{site.baseurl}}/music">Music</a></li>
-          <li><a href="{{site.baseurl}}/photos">Photos</a></li> -->
         </ul>
       </nav>
     </header>
     {{content}}
     <footer>
-      <p>{{site.footer-links.email}}</p>
+      <p><a href="mailto:{{site.footer-links.email}}" target="_blank">{{site.footer-links.email}}</a></p>
       <small>&copy;2021 {{site.name}}</small>
     </footer>
     {% include analytics.html %}
