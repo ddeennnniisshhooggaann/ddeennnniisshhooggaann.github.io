@@ -96,3 +96,5 @@ nav-links:
     url: /music/
   - page: Photos
     url: /photos/
+
+destination: ../docs
